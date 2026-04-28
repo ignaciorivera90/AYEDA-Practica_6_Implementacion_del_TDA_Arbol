@@ -1,3 +1,16 @@
+// Universidad de La Laguna
+// Escuela Superior de Ingeniería y Tecnología
+// Grado en Ingeniería Informática
+// Asignatura: Algoritmos y Estructuras de Datos Avanzadas
+// Curso: 2º
+// Práctica 6: Implementación del TDA Árbol
+// Autor: Ignacio Andres Rivera Barrientos
+// Correo: alu0101675053@ull.edu.es
+// Fecha: 27/04/2026
+// Archivo: nif.cc
+// Descripción: Implementación de la clase nif y de sus operadores
+// de comparación, entrada y salida.
+
 #include "../include/nif.h"
 
 nif::nif(long value) : value_(value) {}

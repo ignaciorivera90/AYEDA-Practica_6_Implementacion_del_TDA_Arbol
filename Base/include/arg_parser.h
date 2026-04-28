@@ -1,3 +1,15 @@
+// Universidad de La Laguna
+// Escuela Superior de Ingeniería y Tecnología
+// Grado en Ingeniería Informática
+// Asignatura: Algoritmos y Estructuras de Datos Avanzadas
+// Curso: 2º
+// Práctica 6: Implementación del TDA Árbol
+// Autor: Ignacio Andres Rivera Barrientos
+// Correo: alu0101675053@ull.edu.es
+// Fecha: 27/04/2026
+// Archivo: arg_parser.h
+// Descripción: Clase encargada de procesar los argumentos de entrada del programa.
+
 #ifndef ARG_PARSER_H
 #define ARG_PARSER_H
 
@@ -15,6 +27,9 @@ enum InitMode {
   kFile
 };
 
+/**
+ * @brief Parses command-line arguments
+ */
 class ArgParser {
  public:
   ArgParser(int argc, char* argv[]) {

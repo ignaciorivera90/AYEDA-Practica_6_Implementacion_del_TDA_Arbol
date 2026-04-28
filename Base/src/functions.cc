@@ -1,3 +1,16 @@
+// Universidad de La Laguna
+// Escuela Superior de Ingeniería y Tecnología
+// Grado en Ingeniería Informática
+// Asignatura: Algoritmos y Estructuras de Datos Avanzadas
+// Curso: 2º
+// Práctica 6: Implementación del TDA Árbol
+// Autor: Ignacio Andres Rivera Barrientos
+// Correo: alu0101675053@ull.edu.es
+// Fecha: 27/04/2026
+// Archivo: functions.cc
+// Descripción: Implementación de funciones auxiliares para la gestión del árbol
+// y del menú interactivo.
+
 #include "../include/functions.h"
 
 #include <cstdlib>
@@ -7,6 +20,9 @@
 
 #include "../include/tree_exception.h"
 
+/**
+ * @brief Clears the console screen
+ */
 void ClearScreen() {
 #ifdef _WIN32
   system("cls");
@@ -15,17 +31,32 @@ void ClearScreen() {
 #endif
 }
 
+
+
+/**
+ * @brief Waits for user input before continuing
+ */
 void Pause() {
   std::cout << "\nPulsa ENTER para continuar...";
   std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
   std::cin.get();
 }
 
+
+
+/**
+ * @brief Initializes an empty tree
+ */
 void InitManual(AB<nif>* arbol) {
   std::cout << "Arbol vacio\n";
   std::cout << *arbol << std::endl;
 }
 
+
+
+/**
+ * @brief Initializes the tree with random values
+ */
 void InitRandom(AB<nif>* arbol, int size) {
   if (size <= 0) {
     throw TreeException("El numero de elementos debe ser mayor que 0.");
@@ -39,6 +70,11 @@ void InitRandom(AB<nif>* arbol, int size) {
   std::cout << *arbol << std::endl;
 }
 
+
+
+/**
+ * @brief Initializes the tree from a file
+ */
 void InitFile(AB<nif>* arbol, int size, const std::string& filename) {
   if (size <= 0) {
     throw TreeException("El numero de elementos debe ser mayor que 0.");
@@ -60,6 +96,11 @@ void InitFile(AB<nif>* arbol, int size, const std::string& filename) {
   std::cout << *arbol << std::endl;
 }
 
+
+
+/**
+ * @brief Saves the tree to a file
+ */
 void SaveTreeToFile(AB<nif>* arbol) {
   std::string filename;
 
@@ -78,6 +119,11 @@ void SaveTreeToFile(AB<nif>* arbol) {
   std::cout << "Arbol guardado correctamente en " << path << "\n";
 }
 
+
+
+/**
+ * @brief Inserts multiple nodes into the tree
+ */
 void InsertNNodes(AB<nif>* arbol) {
   int n;
 
@@ -102,6 +148,11 @@ void InsertNNodes(AB<nif>* arbol) {
   }
 }
 
+
+
+/**
+ * @brief Searches three nodes and displays comparisons
+ */
 void SearchThreeNodes(AB<nif>* arbol) {
   for (int i = 0; i < 3; ++i) {
     nif clave;
@@ -120,8 +171,12 @@ void SearchThreeNodes(AB<nif>* arbol) {
   }
 }
 
-void Menu(AB<nif>* arbol, const std::string& tree_type,
-          const std::string& init_mode) {
+
+
+/**
+ * @brief Interactive menu for user operations
+ */
+void Menu(AB<nif>* arbol, const std::string& tree_type, const std::string& init_mode) {
   int option = -1;
 
   while (option != 0) {

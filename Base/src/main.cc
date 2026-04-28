@@ -1,3 +1,16 @@
+// Universidad de La Laguna
+// Escuela Superior de Ingeniería y Tecnología
+// Grado en Ingeniería Informática
+// Asignatura: Algoritmos y Estructuras de Datos Avanzadas
+// Curso: 2º
+// Práctica 6: Implementación del TDA Árbol
+// Autor: Ignacio Andres Rivera Barrientos
+// Correo: alu0101675053@ull.edu.es
+// Fecha: 27/04/2026
+// Archivo: main.cc
+// Descripción: Programa principal que gestiona la ejecución del árbol
+// binario y el menú interactivo.
+
 #include <ctime>
 #include <cstdlib>
 #include <iostream>
@@ -10,6 +23,9 @@
 #include "../include/nif.h"
 #include "../include/tree_exception.h"
 
+/**
+ * @brief Main function of the program
+ */
 int main(int argc, char* argv[]) {
   srand(time(nullptr));
 
